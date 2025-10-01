@@ -119,7 +119,7 @@
             </button>
         </xpath>
         <xpath
-            expr="//button[hasclass('o_form_button_create')][hasclass('btn-secondary')]"
+            expr="//button[hasclass('o_form_button_create')][hasclass('btn-outline-primary')]"
             position="replace"
         >
             <button
@@ -177,12 +177,13 @@
     </t>
     <t
         t-name="web_responsive.ListView.Buttons"
-        t-inherit="web.ListView.Buttons"
+        t-inherit="web.ListView.EditableButtons"
         t-inherit-mode="extension"
     >
         <!-- Add responsive icons to buttons -->
         <xpath expr="//button[hasclass('o_list_button_save')]" position="replace">
             <button
+                t-if="editedRecord"
                 type="button"
                 class="btn btn-primary o_list_button_save"
                 data-hotkey="s"
@@ -193,6 +194,7 @@
         </xpath>
         <xpath expr="//button[hasclass('o_list_button_discard')]" position="replace">
             <button
+                t-if="editedRecord"
                 type="button"
                 class="btn btn-secondary o_list_button_discard"
                 data-hotkey="d"
