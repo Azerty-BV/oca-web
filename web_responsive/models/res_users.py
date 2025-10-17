@@ -29,6 +29,7 @@ class ResUsers(models.Model):
         help="Redirect to dashboard after signing in",
         compute="_compute_redirect_home",
         store=True,
+        default=True,
         readonly=False,
     )
 
