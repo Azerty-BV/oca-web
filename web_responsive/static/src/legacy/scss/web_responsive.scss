@@ -176,7 +176,7 @@ body:not(.o_statusbar_buttons) {
 // https://caniuse.com/css-has
 .o-mail-Chatter-top:has(.o-mail-Chatter-sendMessage.active) {
     .o-mail-Composer {
-        background-color: lighten($o-brand-primary, 35%);
+        background-color: rgba($o-brand-primary, 0.5);
         padding-top: 0.25rem !important;
     }
 
